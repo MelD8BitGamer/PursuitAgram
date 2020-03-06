@@ -22,6 +22,18 @@
 		4D56556D2412ED99006C5507 /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56556C2412ED99006C5507 /* DatabaseServices.swift */; };
 		4D56556F2412EE91006C5507 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56556E2412EE91006C5507 /* StorageService.swift */; };
 		4D5655722412F58F006C5507 /* UIImage Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655712412F58F006C5507 /* UIImage Extension.swift */; };
+		4D5655742412F657006C5507 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655732412F657006C5507 /* ShowAlert.swift */; };
+		4D5655762412F721006C5507 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655752412F721006C5507 /* CreateProfileViewController.swift */; };
+		4D5655782412F737006C5507 /* MainFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655772412F737006C5507 /* MainFeedViewController.swift */; };
+		4D56557A2412F74C006C5507 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655792412F74C006C5507 /* DetailedViewController.swift */; };
+		4D56557C2412F782006C5507 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56557B2412F782006C5507 /* ProfileViewController.swift */; };
+		4D56557E2412F7A3006C5507 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56557D2412F7A3006C5507 /* EmptyView.swift */; };
+		4D5655802412F7C1006C5507 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56557F2412F7C1006C5507 /* ProfileView.swift */; };
+		4D5655822412F7CF006C5507 /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655812412F7CF006C5507 /* CreateProfileView.swift */; };
+		4D5655842412F809006C5507 /* AddPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655832412F809006C5507 /* AddPictureView.swift */; };
+		4D5655862412F82F006C5507 /* MainFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655852412F82F006C5507 /* MainFeedView.swift */; };
+		4D5655882412F847006C5507 /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655872412F847006C5507 /* DetailedView.swift */; };
+		4D56558A2412F877006C5507 /* MainFeedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655892412F877006C5507 /* MainFeedCollectionCell.swift */; };
 		DFB7860127ED68C09C9860E3 /* Pods_PursuitstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E32823580D522E506B0768 /* Pods_PursuitstagramTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +68,18 @@
 		4D56556C2412ED99006C5507 /* DatabaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
 		4D56556E2412EE91006C5507 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		4D5655712412F58F006C5507 /* UIImage Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage Extension.swift"; sourceTree = "<group>"; };
+		4D5655732412F657006C5507 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		4D5655752412F721006C5507 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		4D5655772412F737006C5507 /* MainFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedViewController.swift; sourceTree = "<group>"; };
+		4D5655792412F74C006C5507 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		4D56557B2412F782006C5507 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4D56557D2412F7A3006C5507 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		4D56557F2412F7C1006C5507 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		4D5655812412F7CF006C5507 /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
+		4D5655832412F809006C5507 /* AddPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPictureView.swift; sourceTree = "<group>"; };
+		4D5655852412F82F006C5507 /* MainFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedView.swift; sourceTree = "<group>"; };
+		4D5655872412F847006C5507 /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
+		4D5655892412F877006C5507 /* MainFeedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedCollectionCell.swift; sourceTree = "<group>"; };
 		53D82449895C1ED9D6E7C008 /* Pods-PursuitstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PursuitstagramTests.release.xcconfig"; path = "Target Support Files/Pods-PursuitstagramTests/Pods-PursuitstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		A4E32823580D522E506B0768 /* Pods_PursuitstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PursuitstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EE2D6675DF0295C71CF4B9 /* Pods-PursuitstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PursuitstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-PursuitstagramTests/Pods-PursuitstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +156,7 @@
 		4D56555F2412C410006C5507 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4D5655892412F877006C5507 /* MainFeedCollectionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -141,6 +166,12 @@
 			children = (
 				4D5655682412DE6F006C5507 /* GradientView.swift */,
 				4D5655662412C6A4006C5507 /* LoginView.swift */,
+				4D5655812412F7CF006C5507 /* CreateProfileView.swift */,
+				4D56557F2412F7C1006C5507 /* ProfileView.swift */,
+				4D56557D2412F7A3006C5507 /* EmptyView.swift */,
+				4D5655832412F809006C5507 /* AddPictureView.swift */,
+				4D5655852412F82F006C5507 /* MainFeedView.swift */,
+				4D5655872412F847006C5507 /* DetailedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +187,10 @@
 			isa = PBXGroup;
 			children = (
 				4D5654D5240EE707006C5507 /* LoginViewController.swift */,
+				4D5655752412F721006C5507 /* CreateProfileViewController.swift */,
+				4D56557B2412F782006C5507 /* ProfileViewController.swift */,
+				4D5655772412F737006C5507 /* MainFeedViewController.swift */,
+				4D5655792412F74C006C5507 /* DetailedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				4D5655712412F58F006C5507 /* UIImage Extension.swift */,
+				4D5655732412F657006C5507 /* ShowAlert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,14 +421,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D56557A2412F74C006C5507 /* DetailedViewController.swift in Sources */,
+				4D56557E2412F7A3006C5507 /* EmptyView.swift in Sources */,
 				4D5654D6240EE707006C5507 /* LoginViewController.swift in Sources */,
 				4D5654D2240EE707006C5507 /* AppDelegate.swift in Sources */,
 				4D5655692412DE6F006C5507 /* GradientView.swift in Sources */,
+				4D56557C2412F782006C5507 /* ProfileViewController.swift in Sources */,
+				4D5655762412F721006C5507 /* CreateProfileViewController.swift in Sources */,
 				4D5655672412C6A4006C5507 /* LoginView.swift in Sources */,
+				4D5655822412F7CF006C5507 /* CreateProfileView.swift in Sources */,
+				4D5655802412F7C1006C5507 /* ProfileView.swift in Sources */,
 				4D5655722412F58F006C5507 /* UIImage Extension.swift in Sources */,
+				4D5655742412F657006C5507 /* ShowAlert.swift in Sources */,
+				4D5655882412F847006C5507 /* DetailedView.swift in Sources */,
+				4D5655862412F82F006C5507 /* MainFeedView.swift in Sources */,
+				4D5655782412F737006C5507 /* MainFeedViewController.swift in Sources */,
+				4D5655842412F809006C5507 /* AddPictureView.swift in Sources */,
 				4D56556B2412ED21006C5507 /* AuthenticationSession.swift in Sources */,
 				4D56556F2412EE91006C5507 /* StorageService.swift in Sources */,
 				4D5654D4240EE707006C5507 /* SceneDelegate.swift in Sources */,
+				4D56558A2412F877006C5507 /* MainFeedCollectionCell.swift in Sources */,
 				4D56556D2412ED99006C5507 /* DatabaseServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
