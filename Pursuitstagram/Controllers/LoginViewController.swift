@@ -12,9 +12,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    public var loginView = LoginView()
+    
+    override func loadView() {
+        view = loginView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        view.backgroundColor = .systemBackground
     }
 
 

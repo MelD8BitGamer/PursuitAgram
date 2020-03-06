@@ -17,6 +17,11 @@
 		4D56555C2412C05C006C5507 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 4D56555B2412C05C006C5507 /* Notes */; };
 		4D56555E2412C268006C5507 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D56555D2412C268006C5507 /* GoogleService-Info.plist */; };
 		4D5655672412C6A4006C5507 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655662412C6A4006C5507 /* LoginView.swift */; };
+		4D5655692412DE6F006C5507 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655682412DE6F006C5507 /* GradientView.swift */; };
+		4D56556B2412ED21006C5507 /* AuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56556A2412ED21006C5507 /* AuthenticationSession.swift */; };
+		4D56556D2412ED99006C5507 /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56556C2412ED99006C5507 /* DatabaseServices.swift */; };
+		4D56556F2412EE91006C5507 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56556E2412EE91006C5507 /* StorageService.swift */; };
+		4D5655722412F58F006C5507 /* UIImage Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655712412F58F006C5507 /* UIImage Extension.swift */; };
 		DFB7860127ED68C09C9860E3 /* Pods_PursuitstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E32823580D522E506B0768 /* Pods_PursuitstagramTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +51,11 @@
 		4D56555B2412C05C006C5507 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		4D56555D2412C268006C5507 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D5655662412C6A4006C5507 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Pursuitstagram/Controllers/LoginView.swift; sourceTree = SOURCE_ROOT; };
+		4D5655682412DE6F006C5507 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = Pursuitstagram/SupportingFiles/GradientView.swift; sourceTree = SOURCE_ROOT; };
+		4D56556A2412ED21006C5507 /* AuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSession.swift; sourceTree = "<group>"; };
+		4D56556C2412ED99006C5507 /* DatabaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
+		4D56556E2412EE91006C5507 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		4D5655712412F58F006C5507 /* UIImage Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage Extension.swift"; sourceTree = "<group>"; };
 		53D82449895C1ED9D6E7C008 /* Pods-PursuitstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PursuitstagramTests.release.xcconfig"; path = "Target Support Files/Pods-PursuitstagramTests/Pods-PursuitstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		A4E32823580D522E506B0768 /* Pods_PursuitstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PursuitstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EE2D6675DF0295C71CF4B9 /* Pods-PursuitstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PursuitstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-PursuitstagramTests/Pods-PursuitstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +112,7 @@
 				4D5655622412C417006C5507 /* Controllers */,
 				4D5655602412C413006C5507 /* Views */,
 				4D56555F2412C410006C5507 /* Cells */,
+				4D5655702412F56D006C5507 /* Extensions */,
 				4D5655632412C468006C5507 /* SupportingFiles */,
 				4D5654DF240EE709006C5507 /* Info.plist */,
 				4D56555D2412C268006C5507 /* GoogleService-Info.plist */,
@@ -128,6 +139,7 @@
 		4D5655602412C413006C5507 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D5655682412DE6F006C5507 /* GradientView.swift */,
 				4D5655662412C6A4006C5507 /* LoginView.swift */,
 			);
 			path = Views;
@@ -162,6 +174,9 @@
 		4D5655642412C47F006C5507 /* FirebaseServices */ = {
 			isa = PBXGroup;
 			children = (
+				4D56556A2412ED21006C5507 /* AuthenticationSession.swift */,
+				4D56556C2412ED99006C5507 /* DatabaseServices.swift */,
+				4D56556E2412EE91006C5507 /* StorageService.swift */,
 			);
 			path = FirebaseServices;
 			sourceTree = "<group>";
@@ -171,6 +186,14 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		4D5655702412F56D006C5507 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D5655712412F58F006C5507 /* UIImage Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5DAD969FCF2BB19EFF956C7D /* Frameworks */ = {
@@ -364,8 +387,13 @@
 			files = (
 				4D5654D6240EE707006C5507 /* LoginViewController.swift in Sources */,
 				4D5654D2240EE707006C5507 /* AppDelegate.swift in Sources */,
+				4D5655692412DE6F006C5507 /* GradientView.swift in Sources */,
 				4D5655672412C6A4006C5507 /* LoginView.swift in Sources */,
+				4D5655722412F58F006C5507 /* UIImage Extension.swift in Sources */,
+				4D56556B2412ED21006C5507 /* AuthenticationSession.swift in Sources */,
+				4D56556F2412EE91006C5507 /* StorageService.swift in Sources */,
 				4D5654D4240EE707006C5507 /* SceneDelegate.swift in Sources */,
+				4D56556D2412ED99006C5507 /* DatabaseServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
