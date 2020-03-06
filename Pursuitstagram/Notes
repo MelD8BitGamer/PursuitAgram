@@ -1,0 +1,30 @@
+First I added a project on x code and on git hub
+i also went to terminal to add cocoapods by going to terminal and add pod init in the file to create a podfile
+in the pod file i added the following
+pod 'Firebase/Auth'
+pod 'Alamofire'
+pod 'Firebase/Firestore'
+#pod 'FirebaseFirestoreSwift' //this one is commented out just in case i dont need it
+pod 'Firebase/Storage'
+pod 'Kingfisher'
+then added a project on firebase called PursuitAgram
+following the prompts i enabled google analytics using my default account
+once done and it created i then go to the setting to add a project by pressing the iOS button.
+this will ask for a bundleID and in X code i will copy the BundleID and paste it in the textfield you really dont need anything else
+It will prompt me to download googleservices file and i will drag it UNDER my info.plist
+this will copy it in my file and a prompt will come up just say yes then back at firebase hit next
+
+then go to terminal and press pod install
+ YOU MUST CLOSE YOUR APP AND NOW OPEN IT BACK UP IN XSWORKSPACE
+ it will have all the pods installed 
+ 
+then in AppDelelgate
+import UIKit
+import Firebase
+
+then in AppDelegate func didFinishLaunchingWithOptions
+// Configuring Firebase step 2
+  FirebaseApp.configure()
+  return true
+}
+

@@ -1,0 +1,6 @@
+framework module Pods_Pursuitstagram {
+  umbrella header "Pods-Pursuitstagram-umbrella.h"
+
+  export *
+  module * { export * }
+}
