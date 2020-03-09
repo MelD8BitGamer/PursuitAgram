@@ -34,6 +34,8 @@
 		4D5655862412F82F006C5507 /* MainFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655852412F82F006C5507 /* MainFeedView.swift */; };
 		4D5655882412F847006C5507 /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655872412F847006C5507 /* DetailedView.swift */; };
 		4D56558A2412F877006C5507 /* MainFeedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5655892412F877006C5507 /* MainFeedCollectionCell.swift */; };
+		4D56558C241323B7006C5507 /* MutlicolorFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56558B241323B6006C5507 /* MutlicolorFont.swift */; };
+		4D56558E24134415006C5507 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56558D24134415006C5507 /* ViewControllerExtension.swift */; };
 		DFB7860127ED68C09C9860E3 /* Pods_PursuitstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E32823580D522E506B0768 /* Pods_PursuitstagramTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		4D5655852412F82F006C5507 /* MainFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedView.swift; sourceTree = "<group>"; };
 		4D5655872412F847006C5507 /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
 		4D5655892412F877006C5507 /* MainFeedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedCollectionCell.swift; sourceTree = "<group>"; };
+		4D56558B241323B6006C5507 /* MutlicolorFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutlicolorFont.swift; sourceTree = "<group>"; };
+		4D56558D24134415006C5507 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerExtension.swift; path = Pursuitstagram/Views/ViewControllerExtension.swift; sourceTree = SOURCE_ROOT; };
 		53D82449895C1ED9D6E7C008 /* Pods-PursuitstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PursuitstagramTests.release.xcconfig"; path = "Target Support Files/Pods-PursuitstagramTests/Pods-PursuitstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		A4E32823580D522E506B0768 /* Pods_PursuitstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PursuitstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EE2D6675DF0295C71CF4B9 /* Pods-PursuitstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PursuitstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-PursuitstagramTests/Pods-PursuitstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			children = (
 				4D5655682412DE6F006C5507 /* GradientView.swift */,
 				4D5655662412C6A4006C5507 /* LoginView.swift */,
+				4D56558B241323B6006C5507 /* MutlicolorFont.swift */,
 				4D5655812412F7CF006C5507 /* CreateProfileView.swift */,
 				4D56557F2412F7C1006C5507 /* ProfileView.swift */,
 				4D56557D2412F7A3006C5507 /* EmptyView.swift */,
@@ -226,6 +231,7 @@
 		4D5655702412F56D006C5507 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4D56558D24134415006C5507 /* ViewControllerExtension.swift */,
 				4D5655712412F58F006C5507 /* UIImage Extension.swift */,
 				4D5655732412F657006C5507 /* ShowAlert.swift */,
 			);
@@ -424,6 +430,7 @@
 				4D56557A2412F74C006C5507 /* DetailedViewController.swift in Sources */,
 				4D56557E2412F7A3006C5507 /* EmptyView.swift in Sources */,
 				4D5654D6240EE707006C5507 /* LoginViewController.swift in Sources */,
+				4D56558E24134415006C5507 /* ViewControllerExtension.swift in Sources */,
 				4D5654D2240EE707006C5507 /* AppDelegate.swift in Sources */,
 				4D5655692412DE6F006C5507 /* GradientView.swift in Sources */,
 				4D56557C2412F782006C5507 /* ProfileViewController.swift in Sources */,
@@ -435,6 +442,7 @@
 				4D5655742412F657006C5507 /* ShowAlert.swift in Sources */,
 				4D5655882412F847006C5507 /* DetailedView.swift in Sources */,
 				4D5655862412F82F006C5507 /* MainFeedView.swift in Sources */,
+				4D56558C241323B7006C5507 /* MutlicolorFont.swift in Sources */,
 				4D5655782412F737006C5507 /* MainFeedViewController.swift in Sources */,
 				4D5655842412F809006C5507 /* AddPictureView.swift in Sources */,
 				4D56556B2412ED21006C5507 /* AuthenticationSession.swift in Sources */,

@@ -9,80 +9,101 @@
 import UIKit
 
 class LoginView: UIView {
-    //TODO: Fix UI constraints
-    private lazy var containerView: UIImageView = {
+    
+    //TODO: Fix stackview constraints
+    public lazy var containerView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "GreyGradient")
         view.backgroundColor = .systemPink
         return view
     }()
     
-    private lazy var infoLabel: UILabel = {
+    public lazy var infoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
-        label.text = "Pursuit"
+        label.text = "Is this your first time? Create an account below"
+        label.textAlignment = .center
         label.textColor = .systemRed
-        label.backgroundColor = .systemBackground
+        label.backgroundColor = .clear
         return label
     }()
     
-//    private lazy var popUpView: UIView = {
-//        let view = UIView()
-//        return view
-//    }()
+    public lazy var pursuitAgramLabel: UILabel = {
+           let label = UILabel()
+           label.font = UIFont(name: "HelveticaNeue-Bold", size: 25)
+        label.attributedText = FormattedString.turnMyTextIntoColorText("PURSUITAGRAM")
+           label.textAlignment = .center
+          // label.textColor = #colorLiteral(red: 0.1179727539, green: 0.03814018518, blue: 0.7834613919, alpha: 1)
+           label.backgroundColor = .clear
+           return label
+       }()
     
-    private lazy var pursuitLogo: UIImageView = {
+    public lazy var pursuitLogo: UIImageView = {
         let iV = UIImageView()
         iV.image = UIImage(named: "pursuit-logo")
         iV.contentMode = .scaleAspectFit
         return iV
     }()
     
-    private lazy var emailTextField: UITextField = {
+    public lazy var emailTextField: UITextField = {
         let tf = UITextField()
-        tf.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
+        tf.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
         tf.placeholder = "email"
         tf.backgroundColor = .systemBackground
+        tf.layer.cornerRadius = 5.0
         return tf
     }()
     
-    private lazy var passwordTextField: UITextField = {
+    public lazy var passwordTextField: UITextField = {
         let tf = UITextField()
-        tf.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
+        tf.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
         tf.placeholder = "password"
         tf.backgroundColor = .systemBackground
+        tf.layer.cornerRadius = 5.0
         return tf
     }()
     
-    private lazy var loginButton: UIButton = {
+    public lazy var loginButton: UIButton = {
         let button = UIButton()
-        button.titleLabel?.text = "LOGIN"
+        button.setTitle("LOGIN", for: .normal)
+        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 25)
+        button.titleLabel?.textAlignment = .center
         button.titleLabel?.textColor = .white
-        button.titleColor(for: .normal)
         button.showsTouchWhenHighlighted = true
-        button.backgroundColor = .systemGray
+        button.layer.cornerRadius = 7.0
+        button.backgroundColor = .systemOrange
         return button
     }()
     
-    private lazy var stackView: UIStackView = {
+    public lazy var stackView: UIStackView = {
         let sv = UIStackView()
+        //when dealing with stackViews you need to know which way the stack view is going and the distribution
+        sv.axis = .horizontal
+        sv.distribution = .fill
+        sv.spacing = 7
         return sv
     }()
     
-    private lazy var accountStateMessage: UILabel = {
+    public lazy var accountStateMessage: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
+        label.font = UIFont(name: "HelveticaNeue", size: 14)
         label.numberOfLines = 0
-        label.text = "Don't have an Account? Click "
+        label.text = "Don't have an Account? Click sign up"
+        label.textColor = .systemOrange
         label.backgroundColor = .systemBackground
+        label.layer.cornerRadius = 7.0
         return label
     }()
     
-    private lazy var accountStateButton: UIButton = {
+    public lazy var accountStateButton: UIButton = {
         let button = UIButton()
-        button.titleLabel?.text = "SIGN UP"
-        button.titleLabel?.textColor = .systemRed
+        button.setTitle("SignUp", for: .normal)
+        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
+        button.titleLabel?.textAlignment = .left
+        //button.titleLabel?.textColor = .systemBackground
         button.backgroundColor = .systemBackground
+        button.setTitleColor(.systemOrange, for: .normal)
+        button.layer.cornerRadius = 7.0
         return button
     }()
     
@@ -97,38 +118,48 @@ class LoginView: UIView {
     }
     
     private func commonInit() {
-        setUpInfoLabelConstraints()
         setupContainerView()
+        setUpInfoLabelConstraints()
+        setUpPursuitAgramLabelConstraints()
         setUpPursuitLogoView()
         setUpEmailTFConstraints()
         setUpPasswordTFConstraints()
         setUpLoginButtonConstraints() 
         setUpStackViewConstraints()
-        setUpAccountStateMessageConstraints()
-        setupAccountStatButtonConstraints()
+        //setUpAccountStateMessageConstraints()
+        //setupAccountStatButtonConstraints()
     }
     
     private func setUpInfoLabelConstraints() {
-        addSubview(infoLabel)
+        containerView.addSubview(infoLabel)
         infoLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            infoLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            infoLabel.bottomAnchor.constraint(equalTo :containerView.topAnchor),
+            infoLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,constant: 8),
             infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             infoLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            infoLabel.heightAnchor.constraint(equalToConstant: 40)
+            //infoLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     private func setupContainerView() {
         addSubview(containerView)
         containerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: infoLabel.bottomAnchor),
+            containerView.topAnchor.constraint(equalTo: topAnchor),
             containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
             containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height / 1.7)
+           // containerView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height / 1.7)
+        ])
+    }
+    private func setUpPursuitAgramLabelConstraints() {
+        containerView.addSubview(pursuitAgramLabel)
+        pursuitAgramLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            pursuitAgramLabel.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 40),
+            pursuitAgramLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            pursuitAgramLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40)
+        
         ])
     }
     
@@ -137,11 +168,11 @@ class LoginView: UIView {
         pursuitLogo.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            pursuitLogo.topAnchor.constraint(equalTo: containerView.topAnchor),
-            pursuitLogo.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-            pursuitLogo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 200),
-            pursuitLogo.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -200),
-            pursuitLogo.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height / 8)
+            pursuitLogo.topAnchor.constraint(equalTo: pursuitAgramLabel.bottomAnchor),
+           // pursuitLogo.bottomAnchor.constraint(equalTo: bottomAnchor),
+            pursuitLogo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 150),
+            pursuitLogo.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -150),
+            pursuitLogo.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height / 4)
         ])
     }
     
@@ -150,7 +181,7 @@ class LoginView: UIView {
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            emailTextField.topAnchor.constraint(equalTo: pursuitLogo.bottomAnchor, constant: 60),
+            emailTextField.topAnchor.constraint(equalTo: pursuitLogo.bottomAnchor, constant: 40),
             emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             emailTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40)
         ])
@@ -162,8 +193,8 @@ class LoginView: UIView {
         
         NSLayoutConstraint.activate([
             passwordTextField.topAnchor.constraint(equalTo:emailTextField.bottomAnchor, constant: 20),
-            emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
-            emailTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40)
+            passwordTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            passwordTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40)
         ])
     }
     private func setUpLoginButtonConstraints() {
@@ -172,45 +203,24 @@ class LoginView: UIView {
         
         NSLayoutConstraint.activate([
             loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
-            loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            loginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            loginButton.bottomAnchor.constraint(equalTo: stackView.topAnchor, constant: -20),
+            loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            loginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             loginButton.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
     
     private func setUpStackViewConstraints() {
         containerView.addSubview(stackView)
+        stackView.addArrangedSubview(accountStateMessage)
+        stackView.addArrangedSubview(accountStateButton)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
-            stackView.heightAnchor.constraint(equalToConstant: 100)
-        ])
-    }
-    
-    private func setUpAccountStateMessageConstraints() {
-        stackView.addSubview(accountStateMessage)
-        accountStateMessage.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            accountStateMessage.topAnchor.constraint(equalTo: stackView.topAnchor),
-            accountStateMessage.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 8),
-            accountStateMessage.trailingAnchor.constraint(equalTo: accountStateButton.leadingAnchor, constant: -8),
-            accountStateMessage.bottomAnchor.constraint(equalTo: stackView.bottomAnchor)
-        ])
-    }
-    
-    private func setupAccountStatButtonConstraints() {
-        stackView.addSubview(accountStateButton)
-        accountStateButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            accountStateButton.topAnchor.constraint(equalTo: stackView.topAnchor),
-            accountStateButton.leadingAnchor.constraint(equalTo: accountStateMessage.trailingAnchor),
-            accountStateButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -8)
+            stackView.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
 }
+
